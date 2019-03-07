@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'codeCrewApp/css/index.css' %}">
+</head>
+<body>
+
+
+
+<div class="wrapper">
+    <div class="navbar">
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'gallery' %}">Gallery</a>
+            <a href="{% url 'contactus' %}">Contact Us</a>
+            <a href="{% url 'resources' %}">Resources</a>
+            <a href="{% url 'aboutus' %}">About Us</a>
+        </nav>
+    </div>
+
+    <div class="header">{% block header %}
+
+        {% endblock header %}
+    </div>
+
+    <div class="maincontent">{% block content %}
+
+        {% endblock content %}
+    </div>
+
+    <div class = 'sidebar'>{% block sidebar %}
+        <p>SIDEBAR</p>
+        {% endblock sidebar %}
+
+    </div>
+
+    <div class="footer">{% block footer %}
+        <p>site created by Carlos</p>
+        {% endblock footer %}
+    </div>
+
+</div>
+
+</body>
+</html>

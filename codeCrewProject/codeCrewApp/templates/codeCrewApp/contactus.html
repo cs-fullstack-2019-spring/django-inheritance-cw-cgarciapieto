@@ -1,0 +1,28 @@
+{% extends 'codeCrewApp/base.html' %}
+
+{% block header %}
+<h1>Contact Us</h1>
+{% endblock header %}
+
+
+{% block sidebar %}
+
+{% endblock sidebar %}
+
+
+
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Submit</button>
+</form>
+{% endblock content %}
+
+
+
+
+
+
+
